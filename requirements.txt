@@ -1,0 +1,7 @@
+markitdown[pdf,docx,pptx,xlsx]>=0.1.9
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9
+aiofiles>=23.0
+requests>=2.31
+defusedxml>=0.7

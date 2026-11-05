@@ -1,0 +1,17 @@
+services:
+  app:
+    build: .
+    ports: ["0.0.0.0:8090:8080"]
+    environment:
+      DATA_DIR: /data
+      MAX_FILE_MB: "50"
+      MAX_FILES: "50"
+      WORKERS: "2"
+      CONVERT_TIMEOUT_S: "120"
+      JOB_TTL_MIN: "60"
+      DOCLING_URL: ${DOCLING_URL:-}
+    tmpfs: ["/data", "/tmp"]
+    read_only: true
+    mem_limit: 1g
+    cpus: "1.5"
+    restart: unless-stopped

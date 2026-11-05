@@ -1,0 +1,18 @@
+[project]
+name = "markitdown-local"
+version = "0.1.0"
+description = "Local web app to convert documents to Markdown"
+requires-python = ">=3.10"
+dependencies = [
+  "markitdown[pdf,docx,pptx,xlsx]>=0.1.9",
+  "fastapi>=0.110",
+  "uvicorn[standard]>=0.29",
+  "python-multipart>=0.0.9",
+  "aiofiles>=23.0",
+  "requests>=2.31",
+  "defusedxml>=0.7",
+]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"

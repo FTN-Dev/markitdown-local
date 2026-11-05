@@ -1,0 +1,28 @@
+:root { --bg:#0f1115; --fg:#e6e6e6; --muted:#9aa0a6; --card:#1a1d23; --accent:#4f8cff; --err:#ff6b6b; --ok:#51cf66; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:system-ui,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--fg); }
+header { padding:16px 24px; border-bottom:1px solid #2a2d33; display:flex; align-items:baseline; gap:16px; }
+header h1 { margin:0; font-size:20px; }
+.muted { color:var(--muted); font-size:13px; }
+.small { font-size:12px; }
+main { padding:24px; max-width:1100px; margin:0 auto; }
+.drop { border:2px dashed #3a3d44; border-radius:12px; padding:40px; text-align:center; background:var(--card); }
+.drop.drag { border-color:var(--accent); background:#1f2533; }
+.btn { background:var(--accent); color:#fff; border:none; padding:8px 14px; border-radius:8px; cursor:pointer; font-size:14px; }
+.btn.secondary { background:#2a2d33; }
+.btn:disabled { opacity:.5; cursor:not-allowed; }
+#controls { margin:16px 0; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+#list { display:flex; flex-direction:column; gap:8px; }
+.item { background:var(--card); border-radius:8px; padding:10px 14px; display:grid; grid-template-columns:1fr auto auto auto; gap:12px; align-items:center; }
+.item .name { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.status { font-size:12px; padding:2px 8px; border-radius:6px; background:#2a2d33; }
+.status.done { background:#1f3a2a; color:var(--ok); }
+.status.failed { background:#3a1f1f; color:var(--err); }
+.status.running { background:#1f2a3a; color:var(--accent); }
+a.dl { color:var(--accent); text-decoration:none; font-size:13px; padding:4px 10px; border:1px solid var(--accent); border-radius:6px; }
+.actions { display:flex; gap:8px; align-items:center; }
+.small-btn { padding:4px 10px; font-size:12px; }
+#preview { margin-top:24px; }
+#preview pre { background:var(--card); padding:16px; border-radius:8px; overflow:auto; max-height:400px; white-space:pre-wrap; word-break:break-word; }
+label.btn { display:inline-block; }
+input[type=file] { display:none; }

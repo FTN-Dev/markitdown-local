@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>markitdown-local</title>
+<link rel="stylesheet" href="/style.css?v=4">
+</head>
+<body>
+<header>
+  <h1>markitdown-local</h1>
+  <span id="formats" class="muted"></span>
+</header>
+<main>
+  <section id="drop" class="drop">
+    <p>Seret &amp; lepas file di sini, atau <label class="btn">pilih file<input type="file" id="fileinput" multiple hidden></label></p>
+    <p class="muted small">Format: PDF, DOCX, PPTX, XLSX, HTML, CSV, JSON, XML, TXT, ZIP, gambar (OCR opsional)</p>
+  </section>
+  <section id="controls">
+    <label><input type="checkbox" id="extract"> ekstrak gambar</label>
+    <button id="processAll" class="btn" disabled>Proses semua</button>
+    <button id="clear" class="btn secondary">Bersihkan</button>
+    <button id="downloadAll" class="btn" disabled>Unduh semua (.zip)</button>
+  </section>
+  <section id="list"></section>
+  <section id="preview" hidden>
+    <h2>Preview</h2>
+    <pre id="previewText"></pre>
+  </section>
+</main>
+<script src="/app.js?v=4"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+[Unit]
+Description=markitdown-local
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/var/www/markitdown-local
+Environment=DATA_DIR=/var/tmp/markitdown-local
+Environment=MAX_FILE_MB=50
+Environment=WORKERS=2
+ExecStart=/var/www/markitdown-local/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8080 --workers 1
+Restart=on-failure
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/var/tmp/markitdown-local
+
+[Install]
+WantedBy=multi-user.target
